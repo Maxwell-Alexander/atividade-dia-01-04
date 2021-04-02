@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #1b5292;
+        }
+
+        body::before {
+            /*    Define uma pseudo-elemento, nesse caso criei uma decoração */
+            content: "";
+            background-color: #3a6494;
+            height: 100vh;
+            position: absolute;
+            top: -50%;
+            left: -5%;
+            width: 100%;
+            z-index: -1;
+
+            transform: rotate(15deg);
+
+        }
+
+        form {
+            background-color: whitesmoke;
+            box-shadow: 0px 0px 15px;
+            width: 80%;
+            max-width: 500px;
+            padding: 5px;
+            border-radius: 3px;
+
+            left: 50%;
+            top: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        fieldset {
+            padding: 10px;
+            border: none;
+        }
+
+        legend {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1b5292;
+        }
+
+        .conteiner-1 {
+            display: flex;
+            margin: 5px auto;
+        }
+
+        .conteiner-2 {
+            width: 15%;
+            display: -webkit-flex;
+            align-items: center;
+        }
+
+        .conteiner-3 {
+            width: 85%;
+        }
+
+        .conteiner-areaText {
+            flex-grow: 1;
+        }
+
+        #area-msg {
+            float: right;
+            margin-right: 4px;
+            width: 80%;
+            border: 2px solid #03394e;
+            border-radius: 6px;
+        }
+
+        input {
+            width: 98%;
+            height: 4vh;
+            border: 2px solid #03394e;
+            border-radius: 6px;
+            padding: 2.5px;
+
+        }
+
+        .conteiner-bto {
+            height: 8vh;
+            display: -webkit-flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            width: 80%;
+            margin: 5px;
+            height: 6vh;
+            background-color: #1b5292;
+            border: none;
+            border-radius: 4px;
+
+        }
+
+        button:hover {
+            background-color: #03394e;
+            font-weight: bold;
+            color: whitesmoke;
+        }
+
+        @media(max-width: 570px) {
+            .conteiner-1 {
+                display: block;
+            }
+
+            .conteiner-2,
+            .conteiner-3 {
+                width: 100%;
+            }
+
+            .conteiner-areaText {
+                width: 100%;
+                padding: 2px;
+            }
+
+            input,
+            #area-msg {
+                width: 99%
+            }
+
+            form {
+                max-height: 80vh;
+            }
+
+            fieldset {
+                max-height: 70vh;
+            }
+
+            .conteiner-bto {
+                margin-top: 10%;
+                max-height: 70vh;
+                width: 100%;
+                display: inline-flex;
+            }
+
+            button {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <form action="#" method="POST">
+            <fieldset>
+                <legend>Fale conosco</legend>
+                <div class="conteiner-1">
+                    <div class="conteiner-2">
+                        <label for="nome">Nome:</label>
+                    </div>
+
+                    <div class="conteiner-3">
+                        <input type="text" required>
+                    </div>
+                </div>
+
+                <div class="conteiner-1">
+                    <div class="conteiner-2">
+                        <label for="mail">E-mail:</label>
+                    </div>
+
+                    <div class="conteiner-3">
+                        <input type="email" required>
+                    </div>
+                </div>
+
+                <div class="conteiner-1">
+                    <div class="conteiner-2">
+                        <label for="fone">Telefone:</label>
+                    </div>
+
+                    <div class="conteiner-3">
+                        <input type="tel" required>
+                    </div>
+                </div>
+
+                <div class="conteiner-1">
+                    <div class="conteiner-2">
+                        <label for="assunto">Assunto:</label>
+                    </div>
+
+                    <div class="conteiner-3">
+                        <input type="text" required>
+                    </div>
+                </div>
+
+                <div class="conteiner-1">
+                    <div class="conteiner-2">
+                        <label for="menssagem">Menssagem:</label>
+                    </div>
+
+                    <div class="conteiner-areaText">
+                        <textarea name="" id="area-msg" cols="30" rows="3" required></textarea>
+                    </div>
+                </div>
+
+                <div class="conteiner-bto">
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Resetar</button>
+                </div>
+
+
+            </fieldset>
+        </form>
+    </main>
+
+</body>
+
+</html>
